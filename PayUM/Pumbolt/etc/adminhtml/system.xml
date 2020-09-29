@@ -12,7 +12,17 @@
                     <label>Environment</label>
 					<source_model>PayUM\Pumbolt\Model\adminhtml\Source\Env</source_model>
                 </field>
-				<field id="pumkey" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+		    
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>		
+		    
+		    <field id="pumkey" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>PayUmoney Key</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
